@@ -1,0 +1,322 @@
+:root {
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Netflix Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local(Raleway), url(../style/BebasNeue-Regular.ttf);
+}
+
+/* ELEMENTOS BASE */
+body {
+    background-color: var(--preta);
+    font-family: 'Netflix Sans','Helvetica Neue', 'Bebas Neue', Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    margin-left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgb(20, 20, 20, .75)
+}
+
+header .logo {
+    margin-left: 20px;
+    color: var(--vermelho);
+    font-family: 'Bebas Neue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+header .topnav a {
+    text-decoration: none;
+    color: #e5e5e5;
+    margin-right: 10px;
+    float: left;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+}
+
+header .topnav a:hover {
+    color: #fff;
+}
+
+.menunav {
+    padding-left: 25px;
+}
+
+
+.topnav {
+    overflow: hidden;
+    float: left;
+}
+
+.topnav a.active {
+    color: white;
+}
+
+/***** BEGIN OF SEARCH BAR ******/
+.sb-search {
+	position: relative;
+	margin-top: 10px;
+	width: 0%;
+	min-width: 40px;
+	height: 40px;
+	float: right;
+	overflow: hidden;
+
+	-webkit-transition: width 0.3s;
+	-moz-transition: width 0.3s;
+	transition: width 0.3s;
+
+	-webkit-backface-visibility: hidden;
+}
+
+/* div */
+.search-box {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    max-height: 40px;
+    /* border-radius: 50px; */
+  }
+
+
+  /* input */
+  .search-input {
+    outline: none;
+    border: none;
+    background: none;
+    width: 0;
+    padding: 0;
+    color: #ffffff;             /*cor do texto form de pesquisa*/
+    background: #000000;        /*cor de fundo form de pesquisa*/
+    float: rigth;                 /* desliza a caixa de form para direita */
+    font-size: 14px;
+    transition: .3s;
+    line-height: 38px;
+    max-height: 40px;
+    border-top: solid #ffffff;
+    border-bottom: solid #ffffff;
+    border-width: 1px;    
+  }
+
+  .search-input::placeholder {
+    color: grey;                 /*texto placeholdr (antes da pesquisa) */
+  }
+  
+  /* icon */
+  .search-btn {
+    color: #ffffff;             /*não achei essa cor, deveria ser do botão*/
+    float: right;
+    width: auto;
+    height: auto;
+    /* border-radius: 50px;     /* deixar botão redondo após hover */
+    /* background: none;        /* sem background aparece só a lupa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: .3s;
+    padding-top: 9px;
+  }
+
+  .search-input:focus,
+  .search-input:not(:placeholder-shown) {
+    width: 210px;
+    max-width: 210px;
+    height: 40px;
+    padding: 0 4%;              /* texto inserido dentro da caixa */ 
+    border-right: solid #ffffff;
+    border-width: 1px;
+  }
+
+  .search-box:hover > .search-input {
+    width: 240px;
+    padding: 0 4%;             /* texto após hover */
+    border-right: solid #ffffff;
+    border-width: 1px;
+  }
+
+  .search-box:hover > .search-btn,
+  .search-input:focus + .search-btn,
+  .search-input:not(:placeholder-shown) + .search-btn {
+    background: #000000;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    border-top: solid #ffffff;
+    border-bottom: solid #ffffff;
+    border-left: solid #ffffff;
+    border-width: 1px;
+  }
+/*** END - EXPAND SEARCH BAR ***/
+
+/* END OF SEARCH BAR */
+
+
+/* BEGIN MAIN RAPPER */
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .5)), url('../IMGANSTA/50rapping.jpg');
+    max-height: 40%;
+    background-size: cover;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 90px;
+}
+
+.filme-principal .titulo {
+    margin-top: 20%;
+    font-size: 40px;
+}
+
+/* END MAIN RAPPER */
+
+.botaoplay {
+    background-color: #ffffff;
+    border: none;
+    color: black;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    padding: 5px 20px;
+    margin-right: 5px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: .3s;
+
+    align-items: center;
+    appearance: none;
+
+    opacity: 1;
+    justify-content: center;
+    user-select: none;
+    will-change: background-color, color;
+    word-break: break-word;
+    white-space: nowrap;
+}
+
+.botaoplay:hover {
+    background-color: #ffffff63;
+    color: black;
+}
+
+.botaoplay i {
+    margin-right: 7px;
+}
+
+.botao {
+    background-color: rgba(109, 109, 110, 0.7);
+    border: none;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    padding: 5px 20px;
+    margin-right: 5px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: .3s;
+
+    align-items: center;
+    appearance: none;
+
+    opacity: 1;
+    justify-content: center;
+    user-select: none;
+    will-change: background-color, color;
+    word-break: break-word;
+    white-space: nowrap;
+
+    /*
+    
+    padding: 0.8rem;
+    display: flex;
+    position: relative;
+
+    */
+}
+
+.botao:hover {
+    background-color: #3f3f3f;
+    color: white;
+}
+
+.botao i {
+    margin-right: 7px;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrossel-titulo {
+    padding: 0px 10px 10px 0px;
+}
+
+.carrossel-filmes {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/* BEGIN - SOCIAL - COLUMNS */
+.coluna {
+    width: 50px;
+    display: inline-block;
+}
+
+.redessociais {
+    border-radius: 7px;
+    max-width: 35px;
+}
+
+/* END - SOCIAL - COLUMNS */
+
+.portfolio {
+    background-color: #000000;
+    color: #5fff2f;
+    text-align: center;
+}
+
+.devfooter {
+    margin: 20px;
+    color: grey;
+    font-size: 14px;
+    text-align: left;
+}

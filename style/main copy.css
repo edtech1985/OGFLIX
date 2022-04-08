@@ -1,0 +1,251 @@
+:root {
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ELEMENTOS BASE */
+body {
+    background-color: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
+
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    margin-left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgb(20, 20, 20,.75)
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+header .topnav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+    float: left;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    
+}
+
+header .topnav a:hover {
+    color: #fff;
+}
+
+
+.topnav {
+    overflow: hidden;
+    float: left;
+}
+
+.topnav a.active {
+    color: white;
+}
+
+/* BEGIN OF SEARCH BAR */
+.topnav .search-container {
+    float: right;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+.topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: rgba(255, 255, 255, 0.0);
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+    background: rgba(255, 255, 255, 0.0);
+}
+/* END OF SEARCH BAR */
+
+/* BEGIN MAIN RAPPER */
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .5)), url('../IMGANSTA/50rapping.jpg');
+    max-height: 40%;
+    background-size: cover;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 90px;
+}
+
+.filme-principal .titulo {
+    margin-top: 20%;
+    font-size: 40px;
+}
+/* BEGIN MAIN RAPPER */
+
+.botaoplay {
+    background-color: #ffffff;
+    border: none;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    padding: 10px 25px;
+    margin-right: 5px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+
+.botaoplay:hover {
+    background-color: #ffffff63;
+    color: black;
+}
+
+.botaoplay i {
+    margin-right: 5px;
+}
+
+.botao {
+    background-color: #606060;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.botao:hover {
+    background-color: #3f3f3f;
+    color: white;
+}
+
+
+
+
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+
+}
+
+
+.carrossel-titulo {
+    padding: 0px 10px 10px 10px;
+}
+
+
+
+.carrossel-filmes {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+/*ZOOM HOVER DESATIVADO*/
+.zoom {
+    transition: transform .2s;
+    /* Animation */
+    width: auto;
+    height: auto;
+    margin: 5px;
+    z-index: 4;
+}
+
+.zoom:hover {
+    transform: scale(1.5);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
+/* INICIO - GRID - COLUNAS */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+    padding: 10px;
+}
+/* FIM - GRID - COLUNAS */
+
+
+
+
+.portfolio {
+    background-color: #000000;
+    color: #5fff2f;
+    text-align: center;
+}
+
+.redessociais {
+    border-radius: 10px;
+    max-width: 50px;
+}
+
+.socialcenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coluna-20 {
+    width: 20%;
+    
+}
+
+.devfooter {
+    margin: 10px;
+    color: #515151;
+    font-size: 14px;
+    text-align: center;
+}

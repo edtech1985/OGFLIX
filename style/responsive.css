@@ -1,0 +1,50 @@
+@media screen and (max-width:600px) {
+    header .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao {
+        margin-top: 5px;
+        width: 120px;
+
+    }
+
+    .botaoplay {
+        margin-top: 5px;
+        width: 120px;
+
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .descricao{
+    width: 50%;
+    }
+}
+
+
+
+
+/* SEARCH BAR */
+@media screen and (max-width: 600px) {
+    .topnav .search-container {
+        float: none;
+    }
+
+    .topnav a,
+    .topnav input[type=text],
+    .topnav .search-container button {
+        float: none;
+        display: flex;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
